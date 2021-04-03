@@ -2,12 +2,12 @@
 
 ## Dependencies
 
-- `ffmpeg` is required to merge the audio files. On ArchLinux, use 
-```bash
+- `ffmpeg` is required to merge the audio files. On ArchLinux, use
+```sudo-bash
 # pacman -S ffmpeg
 ```
 
-- `youtube_dl` python package is required. In a virtual environment, `pip install youtube_dl`.
+- [`youtube_dl`](https://pypi.org/project/youtube_dl/) python package is required. In a virtual environment, `pip install youtube_dl`.
 
 
 ## Usage
