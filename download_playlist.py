@@ -14,8 +14,12 @@ def clean_title(video) -> str:
         opening_parenthesis_index = title.index("(")
         closing_parenthesis_index = title.index(")")
         title = title[:opening_parenthesis_index] + title[closing_parenthesis_index+1:]
-    if " - " not in title:  # add uploader if no author in initial title
-        title = video["uploader"] + " - " + title
+    if " - " not in title:  # add an 'artist' if no author in initial title
+        if len(video["artist"]) > 0:
+            title = video["artist"] + " - " + title
+        else:
+            title = video["channel"] + " - " + title # if it's youtube that automatically add 
+            # video then the "uploader" countains "[...] - Topic" so we try to use "channel"
     return title
 
 
